@@ -8,15 +8,19 @@ You can see the video: &nbsp;&nbsp;
 &nbsp;&nbsp;
 ---
 
-'''
+The reuqierment of this project are :
+- Ubuntu Focal 
+- ROS Noetic
+- GAzebo 11
+
+```
 source /opt/ros/noetic/setup.bash
 cd catkin_ws
 wget https://gist.githubusercontent.com/airuchen/5e58eb5dc54d6dc38ea5d2bedd53f69e/raw/ae3b850aca5a0577105c682eec1ab3b534161cc2/multi_omnibot.repos
 vcs import src/ < multiple_turtlebot3_env.repos
 catkin_make
 source devel/setup.bash
-
-'''
+```
 
 
 
