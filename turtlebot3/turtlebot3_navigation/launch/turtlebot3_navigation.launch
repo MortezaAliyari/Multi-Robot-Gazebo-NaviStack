@@ -1,0 +1,33 @@
+<launch>
+<param name="use_sim_time" value="true"/>
+ <arg name="open_rviz" default="true"/>
+ <arg name="move_forward_only" default="false"/>
+  <!-- Arguments -->
+  <arg name="map_file" default="$(find turtlebot3_navigation)/maps/closeworld2map.yaml"/>
+
+
+
+  <!-- Map server -->
+  <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)">
+    <param name="frame_id" value="map"/>
+  </node>
+
+
+  <!-- AMCL -->
+  <include file="$(find turtlebot3_navigation)/launch/amcl1.launch"/>
+  <include file="$(find turtlebot3_navigation)/launch/amcl2.launch"/>
+
+
+  <!-- Move_base -->
+  <include file="$(find turtlebot3_navigation)/launch/move_base1.launch">
+    <arg name="move_forward_only" value="$(arg move_forward_only)"/>
+  </include>
+  <include file="$(find turtlebot3_navigation)/launch/move_base2.launch">
+    <arg name="move_forward_only" value="$(arg move_forward_only)"/>
+  </include>
+  <!-- rviz -->
+  <group if="$(arg open_rviz)"> 
+    <node pkg="rviz" type="rviz" name="rviz" required="true"
+          args="-d $(find turtlebot3_navigation)/rviz/Multi_turtlebot3_navigation.rviz"/>
+  </group>
+</launch>
