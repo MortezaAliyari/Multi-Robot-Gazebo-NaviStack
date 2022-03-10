@@ -8,11 +8,12 @@ You can see the video: &nbsp;&nbsp;
 &nbsp;&nbsp;
 ---
 
-The reuqierment of this project are :
+### The requirements of this project are :
 - Ubuntu Focal 
 - ROS Noetic
 - GAzebo 11
-
+### Install 
+---
 ```
 source /opt/ros/noetic/setup.bash
 cd catkin_ws
@@ -21,9 +22,22 @@ vcs import src/ < multiple_turtlebot3_env.repos
 catkin_make
 source devel/setup.bash
 ```
+ Open terminal then type blow commands:
+ 
+ ```
+roslaunch turtlebot3_gazebo Multi_turtlebot3_Closeworld2.launch
+```
 
+If you haven't seen error the Gazebo environment should launch. Then type below command:
+![Gazebo Environment](./gazebo.png)
 
-
+ ```
+roslaunch turtlebot3_navigation multi_turtlebot3_navigation.launch
+```
+![RVIZ Environment](./gazebo.png)
+Then click right on "2D nav Goal"  and add "Tool Properties" as new panel to RVIZ.
+Then you can change the 2D nav Goal topic to "/tb3_1/move_base_simple/goal" or "/tb3_2/move_base_simple/goal" like below picture:
+![RVIZ Environment](./2dnav.png)
 
 
 
