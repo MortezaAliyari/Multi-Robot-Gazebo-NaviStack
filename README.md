@@ -28,15 +28,18 @@ roslaunch turtlebot3_gazebo Multi_turtlebot3_Closeworld2.launch
 ```
 
 If you haven't seen error the Gazebo environment should launch. Then type below command:
-![Gazebo Environment](./img/gazebo.png)
+
+![Gazebo Environment](./img/gazebo.PNG)
 
  ```
 roslaunch turtlebot3_navigation multi_turtlebot3_navigation.launch
 ```
-![RVIZ Environment](./img/rviz.png)
+
+![RVIZ Environment](./img/rviz.PNG)
 Then click right on "2D nav Goal"  and add "Tool Properties" as new panel to RVIZ.
 Then you can change the 2D nav Goal topic to "/tb3_1/move_base_simple/goal" or "/tb3_2/move_base_simple/goal" like below picture:
-![RVIZ Environment](./img/2dnav.png)
+
+![RVIZ Environment](./img/2dnav.PNG)
 
 
 
