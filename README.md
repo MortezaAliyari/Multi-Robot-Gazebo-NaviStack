@@ -24,7 +24,7 @@ source devel/setup.bash
  Open terminal then type blow commands:
  
  ```
-roslaunch turtlebot3_gazebo Multi_turtlebot3_Closeworld2.launch
+roslaunch turtlebot3_gazebo multi_turtlebot3_closeworld2.launch
 ```
 
 If you haven't seen error the Gazebo environment should launch. Then type below command:
