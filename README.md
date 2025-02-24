@@ -1,5 +1,5 @@
 # Multi-Robot-Gazebo-NaviStack
-This repo relate to multi mobile robots in Gazebo simulator. Based on Navigation stack packages, environment map is created and each robot is able to do motion planning. **Enter**
+This repo relates to multi-mobile robots in the Gazebo simulator. Based on Navigation stack packages, an environment map is created and each robot can do motion planning.
 ---
 If you like the project give me a star! :star: 
 
